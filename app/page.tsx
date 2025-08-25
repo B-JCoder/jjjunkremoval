@@ -46,11 +46,11 @@ export default function Home() {
       <section id="faq">
         <FAQ />
       </section>
-      <LeadCapture />
-      <CTASection />
       <section id="contact">
-        <ContactBand />
+        <LeadCapture />
       </section>
+      <CTASection />
+      <ContactBand />
       <Footer />
     </div>
   )

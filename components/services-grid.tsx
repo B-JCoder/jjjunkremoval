@@ -1,3 +1,5 @@
+"use client"
+
 import { Trash2, Hammer, PartyPopper, Zap, HardHat, Phone } from "lucide-react"
 
 const ServicesGrid = () => {
@@ -34,6 +36,13 @@ const ServicesGrid = () => {
     },
   ]
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact")
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <section className="bg-gray-900 py-12 sm:py-16 lg:py-20">
       <div className="container mx-auto px-4">
@@ -57,7 +66,10 @@ const ServicesGrid = () => {
               <service.icon className="h-10 w-10 sm:h-12 sm:w-12 text-green-400 mb-4 sm:mb-6" />
               <h3 className="text-white font-bold text-lg sm:text-xl mb-2 sm:mb-3">{service.title}</h3>
               <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">{service.description}</p>
-              <button className="bg-green-500 hover:bg-green-600 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors duration-300 w-full text-sm sm:text-base">
+              <button
+                onClick={scrollToContact}
+                className="bg-green-500 hover:bg-green-600 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors duration-300 w-full text-sm sm:text-base"
+              >
                 {service.cta}
               </button>
             </div>

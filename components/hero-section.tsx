@@ -1,3 +1,5 @@
+"use client"
+
 import { Phone, Calculator, Star } from "lucide-react"
 
 const HeroSection = () => {
@@ -41,7 +43,15 @@ const HeroSection = () => {
               <span className="hidden sm:inline">Call Now: 256-531-7921</span>
               <span className="sm:hidden">Call Now</span>
             </a>
-            <button className="border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg transition-all duration-300 flex items-center justify-center gap-2">
+            <button
+              onClick={() => {
+                const element = document.getElementById("contact")
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" })
+                }
+              }}
+              className="border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg transition-all duration-300 flex items-center justify-center gap-2"
+            >
               <Calculator className="h-5 w-5" />
               Get Free Estimate
             </button>

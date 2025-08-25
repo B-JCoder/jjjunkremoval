@@ -1,3 +1,5 @@
+"use client"
+
 import { MapPin } from "lucide-react"
 
 const ServiceAreas = () => {
@@ -30,7 +32,14 @@ const ServiceAreas = () => {
           </div>
 
           {/* CTA */}
-          <button className="bg-green-500 hover:bg-green-600 text-black px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105">
+          <button
+            onClick={() => {
+              document.getElementById("contact")?.scrollIntoView({
+                behavior: "smooth",
+              })
+            }}
+            className="bg-green-500 hover:bg-green-600 text-black px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105"
+          >
             Check Availability Today
           </button>
         </div>

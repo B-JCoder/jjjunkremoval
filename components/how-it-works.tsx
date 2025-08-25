@@ -1,3 +1,5 @@
+"use client"
+
 import { Phone, Clock, CheckCircle } from "lucide-react"
 
 const HowItWorks = () => {
@@ -54,7 +56,14 @@ const HowItWorks = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <button className="bg-green-500 hover:bg-green-600 text-black px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <button
+            onClick={() => {
+              document.getElementById("contact")?.scrollIntoView({
+                behavior: "smooth",
+              })
+            }}
+            className="bg-green-500 hover:bg-green-600 text-black px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
             Get My Free Estimate
           </button>
         </div>
