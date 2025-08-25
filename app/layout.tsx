@@ -4,9 +4,9 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'JJ Junk Removal',
+  description: 'JJ Junk Removal - Fast, Reliable, and Affordable Junk Removal Services',
+  generator: 'The Linkage Digital',
 }
 
 export default function RootLayout({
